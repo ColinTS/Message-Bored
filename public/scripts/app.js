@@ -13,6 +13,16 @@ angular.module('app', ['ngRoute'])
           templateUrl: '/templates/users.html',
           controller: 'userController',
           controllerAs: 'users'
+        })
+        .when('/register', {
+          templateUrl: '/templates/register.html',
+          controller: 'registerController',
+          controllerAs: 'register'
+        })
+        .when('/login', {
+          templateUrl: '/templates/login.html',
+          controller: 'loginController',
+          controllerAs: 'login'
         });
 
       $locationProvider.html5Mode({
@@ -20,9 +30,3 @@ angular.module('app', ['ngRoute'])
         requireBase: false
       });
     }]);
-  // .controller('userController', ['$scope',
-  //   function($scope){
-  //     $scope.testScope = "hello scope";
-  //     this.controllerAsTest = "hello controllerAs";
-  //   }
-  // ]);

@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute'])
+angular.module('app')
 .controller('userController', ['$scope',
     function($scope){
       $scope.testScope = "hello scope";
