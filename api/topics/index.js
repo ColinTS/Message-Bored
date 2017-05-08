@@ -23,6 +23,13 @@ topics.get('/', (req, res) => {
     });
 });
 
+topics.get('/:id', (req, res) => {
+  Topic.findById(req.params.id)
+    .then(( topic )=> {
+      res.json( topic );
+    });
+});
+
 topics.put('/:name', (req, res) => {
   Topic.update({
     name: req.body.name

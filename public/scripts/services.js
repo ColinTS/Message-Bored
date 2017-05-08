@@ -11,9 +11,6 @@ angular.module('app')
     getUser: function(id) {
       console.log(id);
       return $http.get('/api/users/' + id);
-    },
-    getTopics: function(){
-      return $http.get('/api/topics');
     }
   };
 }])
@@ -22,6 +19,10 @@ angular.module('app')
   return {
     getTopics: function(){
       return $http.get('/api/topics');
+    },
+    getTopic: function(id) {
+      console.log(id);
+      return $http.get('/api/topics/' + id);
     }
   };
 }]);

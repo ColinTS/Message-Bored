@@ -29,6 +29,11 @@ angular.module('app', ['ngRoute'])
           templateUrl: '/templates/singleuser.html',
           controller: 'singleUserController',
           // controllerAs: 'singleusers'
+        })
+        .when('/topics/:id', {
+          templateUrl: '/templates/topic.html',
+          controller: 'singleTopicController',
+          // controllerAs: 'singleusers'
         });
 
 
