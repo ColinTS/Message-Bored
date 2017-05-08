@@ -11,8 +11,18 @@ angular.module('app')
     getUser: function(id) {
       console.log(id);
       return $http.get('/api/users/' + id);
+    },
+    getTopics: function(){
+      return $http.get('/api/topics');
     }
   };
+}])
+.service('TopicsService', ['$http', function ($http) {
 
-
+  return {
+    getTopics: function(){
+      return $http.get('/api/topics');
+    }
+  };
 }]);
+

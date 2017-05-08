@@ -7,7 +7,8 @@ angular.module('app', ['ngRoute'])
 
       $routeProvider
         .when('/', {
-          templateUrl: '/templates/home.html'
+          templateUrl: '/templates/home.html',
+          controller: 'topicController'
         })
         .when('/users', {
           templateUrl: '/templates/users.html',
