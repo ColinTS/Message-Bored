@@ -1,7 +1,11 @@
+ /*jshint esversion: 6*/
 angular.module('app')
-.controller('userController', ['$scope',
-    function($scope){
-      $scope.testScope = "hello scope";
-      this.controllerAsTest = "hello controllerAs";
-    }
-    ]);
+.controller('userController', ['$scope', 'UsersService',
+    function($scope, UsersService){
+          UsersService.getUsers()
+            .then((res) => {
+              $scope.res = res.data;
+            });
+
+  }
+]);

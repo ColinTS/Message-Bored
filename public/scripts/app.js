@@ -23,7 +23,13 @@ angular.module('app', ['ngRoute'])
           templateUrl: '/templates/login.html',
           controller: 'loginController',
           controllerAs: 'login'
+        })
+        .when('/users/:id', {
+          templateUrl: '/templates/singleuser.html',
+          controller: 'singleUserController',
+          // controllerAs: 'singleusers'
         });
+
 
       $locationProvider.html5Mode({
         enabled: true,

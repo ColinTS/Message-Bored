@@ -18,7 +18,6 @@ users.get('/:id', (req, res) => {
 });
 
 users.post('/', (req, res) => {
-  console.log('hello');
   User.create( req.body )
     .then(res.json.bind(res))
     .catch(res.json.bind(res));
