@@ -28,12 +28,14 @@ angular.module('app', ['ngRoute'])
         .when('/users/:id', {
           templateUrl: '/templates/singleuser.html',
           controller: 'singleUserController',
-          // controllerAs: 'singleusers'
         })
         .when('/topics/:id', {
           templateUrl: '/templates/topic.html',
           controller: 'singleTopicController',
-          // controllerAs: 'singleusers'
+        })
+        .when('/addtopic', {
+          templateUrl: '/templates/addtopic.html',
+          controller: 'addTopicController',
         });
 
 

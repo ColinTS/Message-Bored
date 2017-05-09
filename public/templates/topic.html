@@ -1,3 +1,20 @@
 <h1>Topic</h1>
 <br>
 <h3>{{topic.name}}</h3>
+<input type='text'
+      ng-model='newMessage.body'
+      placeholder='Message Body'>
+      <br>
+<input type='text'
+      ng-model='newMessage.author_id'
+      placeholder='Author id'>
+      <br>
+<input type = 'submit'
+      ng-click='createMessage(newMessage, id)'>
+
+<div ng-repeat ="message in messages" style="padding: 5px 0">
+      <p>{{ message.body }}</p>
+      <p>{{ message.Author.name }}</p>
+      <p>{{ message.createdAt }}</p>
+</div>
+

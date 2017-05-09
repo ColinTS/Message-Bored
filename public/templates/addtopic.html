@@ -1,0 +1,12 @@
+<h1>Add a Topic</h1>
+
+<input type='text'
+      ng-model='newTopic.name'
+      placeholder='Topic Name'>
+      <br>
+<input type='text'
+      ng-model='newTopic.created_by'
+      placeholder='Created By'>
+      <br>
+<input type = 'submit'
+      ng-click='createTopic(newTopic)'>

@@ -21,8 +21,22 @@ angular.module('app')
       return $http.get('/api/topics');
     },
     getTopic: function(id) {
-      console.log(id);
       return $http.get('/api/topics/' + id);
+    },
+    createTopic: function(newTopic){
+      return $http.post('/api/topics', newTopic);
+    }
+  };
+}])
+.service('MessagesService', ['$http', function ($http) {
+
+  return {
+    getMessages: function(id){
+      return $http.get('/api/messages/' + id);
+    },
+    createMessage: function(newMessage) {
+      console.log(newMessage);
+      return $http.post('/api/messages', newMessage);
     }
   };
 }]);

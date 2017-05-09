@@ -28,7 +28,7 @@ messages.get('/latest', (req, res) => {
     });
 });
 
-messages.get('/by-topic/:topic_id', ( req, res ) => {
+messages.get('/:topic_id', ( req, res ) => {
   Message.all({
     include: [
       {
@@ -41,7 +41,7 @@ messages.get('/by-topic/:topic_id', ( req, res ) => {
       }
     ],
     order: [
-      ['createdAt', 'ASC']
+      ['createdAt', 'DESC']
     ],
     where : { topic_id : req.params.topic_id }
   })
